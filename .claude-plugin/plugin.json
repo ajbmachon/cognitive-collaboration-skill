@@ -1,0 +1,21 @@
+{
+  "name": "cognitive-collaboration",
+  "description": "Twelve cognitive modes for bulletproofing decisions and expanding thinking. CRITIQUE modes (Red Team, Steelman, Pre-Mortem, Assumptions, Biases) stress-test ideas. EXPANSION modes (First Principles, Analogist, Scenario Weaver, Perspective Shifter, Synthesizer, Option Generator, Values Clarifier) explore possibilities.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Andre Machon",
+    "url": "https://github.com/andremachon"
+  },
+  "repository": "https://github.com/andremachon/cognitive-collaboration-skill",
+  "license": "Proprietary",
+  "homepage": "https://github.com/andremachon/cognitive-collaboration-skill",
+  "keywords": [
+    "cognitive",
+    "collaboration",
+    "decision-making",
+    "red-team",
+    "pre-mortem",
+    "first-principles",
+    "thinking"
+  ]
+}
