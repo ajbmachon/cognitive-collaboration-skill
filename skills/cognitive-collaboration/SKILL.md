@@ -24,7 +24,7 @@ Commands:
 - *chain [numbers] - Run sequence (e.g., *chain 4,1,3)
 - *single - Single response (skip VS default)
 - *quick - Fast single-question analysis
-- *guided - Step-by-step elicitation
+- *skip - Bypass context gathering, proceed immediately
 - *help - Show this menu
 ```
 
@@ -58,45 +58,72 @@ Commands:
 
 ---
 
-## Context-Adaptive Elicitation
+## Mandatory Context Gathering
 
-Claude decides depth based on input complexity:
+**ALWAYS gather context before executing any mode.** No exceptions unless user explicitly skips.
 
-| Input | Behavior |
-|-------|----------|
-| **Simple** (1-2 sentences) | Quick mode - analyze immediately |
-| **Medium** (paragraph) | Standard - one clarifying question if needed |
-| **Complex** (document/high stakes) | Guided - step-by-step elicitation |
+### Why This Is Non-Negotiable
 
-User can override: `*quick` forces immediate analysis, `*guided` forces full elicitation.
+Claude's helpful instinct to proceed with "reasonable inferences" backfires in cognitive analysis:
+- Generic insights replace targeted analysis
+- YOUR situation may be completely different from Claude's assumptions
+- The best insights come from understanding YOUR specific context
 
-### Elicitation Decision Tree
+### How It Works
 
-**Before analyzing, check if you have enough context:**
+**Step 1: Check for explicit skip**
+- User said `*skip` or `*quick` → Proceed immediately
+- User said "just proceed" → Proceed with caveats
+- Otherwise → Continue to Step 2
 
+**Step 2: Gather required context**
+
+| Environment | Method |
+|-------------|--------|
+| **Claude Code** (forms available) | Use AskUserQuestion with 2-4 targeted questions |
+| **Other** (no forms) | Present numbered questions in text |
+
+**Step 3: Evaluate answers**
+- All required fields filled → Proceed to mode
+- Gaps remain → Ask follow-up round (max 3 rounds)
+- User expresses impatience → Proceed with caveats
+
+### Required Context by Mode Type
+
+**CRITIQUE MODES (1-5):** Subject + Stakes + Mode-specific
+**EXPANSION MODES (6-12):** Subject + Constraints + Mode-specific
+
+See [context-gathering.md](reference/context-gathering.md) for detailed templates.
+
+### Form-Based Questions (Claude Code)
+
+When AskUserQuestion is available, use forms like:
 ```
-Is the MODE clear? (user picked a number or context implies one)
-├─ No → Show menu with recommendation based on their question
-└─ Yes → Continue
+Question: "What specifically should I [mode]?"
+Header: "Subject"
+Options: [Domain-appropriate choices]
 
-Do you have the SUBJECT? (what are we analyzing)
-├─ No → Ask: "What specifically should I [mode] for you?"
-└─ Yes → Continue
-
-Do you have STAKES context? (why this matters)
-├─ No, but inferable → Proceed, state your inference
-├─ No, and unclear → Ask: "What's riding on this?"
-└─ Yes → Continue
-
-Is critical detail MISSING for this specific mode?
-├─ Assumptions: Need the plan/proposal → Ask if not provided
-├─ Red Team: Need to know who the critics are → Ask or assume standard personas
-├─ Perspective Shifter: Need stakeholder list → Ask or propose likely stakeholders
-├─ Scenario Weaver: Need time horizon → Ask or assume 1-2 years
-└─ Other modes: Proceed with available context, caveat gaps
+Question: "What's riding on this?"
+Header: "Stakes"
+Options: [Major decision, Exploration, Validation, etc.]
 ```
 
-**Rule of thumb:** If you can produce useful output with reasonable inferences, proceed and state your assumptions. Only ask if truly blocked.
+### Text-Based Fallback
+
+When forms aren't available, present numbered questions:
+```
+Before I [mode], I need to understand your situation:
+
+1. **Subject**: What specifically should I analyze?
+2. **Stakes**: What's riding on this? Why does it matter?
+3. **[Mode-specific]**: [Required question for this mode]
+
+Please answer—or say "*skip" to proceed with my best guesses.
+```
+
+### The Golden Rule
+
+**Ask, don't assume.** The cost of one question round is tiny compared to irrelevant analysis based on wrong assumptions.
 
 ---
 
@@ -268,11 +295,13 @@ Use `*single` to skip VS and get conventional single-response output.
 
 ## Claude Behavior Checklist
 
-- [ ] Show menu when skill activates
-- [ ] Check input complexity for elicitation depth
+- [ ] Show menu when skill activates (unless mode is clear)
+- [ ] **GATHER CONTEXT before any mode** (unless `*skip` or `*quick`)
+- [ ] Use forms (AskUserQuestion) when available; text fallback otherwise
+- [ ] Continue gathering until required fields are complete (max 3 rounds)
 - [ ] Load the specific mode file before executing
 - [ ] Follow that file's process exactly
 - [ ] Use VS output (unless user says `*single`)
 - [ ] End every output with Quality Summary
-- [ ] When chaining: run synthesis at end
+- [ ] When chaining: gather context once at start, run synthesis at end
 - [ ] After completion: "Run another? [numbers]"
