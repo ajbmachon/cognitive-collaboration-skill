@@ -4,9 +4,7 @@ A Claude Code skill providing twelve cognitive modes for bulletproofing decision
 
 ## License
 
-**Proprietary** - Copyright (c) 2025 Andre Machon. All Rights Reserved.
-
-This software is not open source. See [LICENSE](LICENSE) for terms.
+MIT License - Copyright (c) 2025 Andre Machon. See [LICENSE](LICENSE) for details.
 
 ## Installation
 
@@ -37,6 +35,6 @@ This software is not open source. See [LICENSE](LICENSE) for terms.
 
 Invoke by asking Claude to use cognitive collaboration modes, or when preparing pitches, making decisions, stress-testing ideas, or exploring alternatives.
 
-## Contact
+## Author
 
-For licensing inquiries, contact Andre Machon.
+Andre Machon
