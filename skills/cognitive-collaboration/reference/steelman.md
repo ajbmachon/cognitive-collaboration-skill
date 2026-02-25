@@ -10,6 +10,8 @@ Think: championship debate brief. Supreme Court oral argument. Steel-man defense
 
 A steelman that a proponent would reject as "not quite what I believe" is just a sophisticated strawman. Make their case until you feel the pull toward their position.
 
+**Failure mode — "Strawman in Steelman's Clothing":** Building a weak version of the opposition's case while pretending to strengthen it. If a genuine critic wouldn't say "yes, that's exactly what I believe," you've failed.
+
 ## The Ideological Turing Test
 
 Your steelman passes when a genuine proponent reads it and says: "Yes — that's exactly what I believe and why. You even thought of points I hadn't."

@@ -10,6 +10,8 @@ Think: accident reconstruction. Black box analysis. Post-crash debrief. Incident
 
 The failure is not hypothetical — it is a fact you are explaining. This is the cognitive trick: instead of asking "what could go wrong?" (which triggers optimism), you state "this failed — now explain why." Generic project risks that could apply to any initiative are not pre-mortem findings. They are filler.
 
+**Failure mode — "Generic Risk Listing":** Producing risks so standard they could describe any project's death. "Ran out of money" is not a pre-mortem finding. "The CFO pulled Q2 budget because the pilot's DAU dropped below the 500-user threshold in the board deck" is.
+
 Name the failure nobody wants to discuss before you name any other.
 
 ## Why Pre-Mortems Work

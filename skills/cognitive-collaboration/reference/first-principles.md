@@ -14,6 +14,8 @@ Stripping the paint off. Physics-level decomposition. What would you build if no
 
 Generic output looks like listing the features of the current thing and tweaking it slightly.
 
+**Failure mode — "Decomposition Theater":** Breaking something into components without reaching bedrock. If you stop at "we need better marketing" instead of reaching the physics, economics, or human nature underneath, you've decomposed the symptom, not the problem.
+
 Invalidate at least one atom, or you're renovating, not rebuilding.
 
 ---

@@ -10,6 +10,8 @@ Think: IDEO brainstorm rules. Improv "yes, and." Venture studio whiteboard. The 
 
 An option list where the user already thought of everything is worthless. Your value is in options 8-15 — the ones past "running out of ideas." Generate at least 10 before evaluating ANY.
 
+**Failure mode — "Variations on a Theme":** Producing options that are all minor variations of the same approach. If options 2-5 are adjustments to option 1, you've generated one idea and four tweaks. True option generation produces structurally different approaches.
+
 ## The 10+ Rule
 
 | Option # | Typical Quality |

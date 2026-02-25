@@ -10,6 +10,8 @@ Think: detective connecting evidence. Epidemiologist tracing an outbreak. Intell
 
 If the output could be a table of contents of the inputs, it's summary, not synthesis. The throughline must surprise. State the underlying dynamic before explaining it.
 
+**Failure mode — "List-Disguised-as-Synthesis":** Listing all the inputs and calling it a throughline. Synthesis means finding what CONNECTS disparate findings into a single explanatory model — not summarizing them side by side.
+
 ## The Three Synthesis Moves
 
 ### Move 1: Throughline

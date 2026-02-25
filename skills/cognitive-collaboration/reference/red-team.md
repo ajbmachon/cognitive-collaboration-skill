@@ -10,6 +10,8 @@ Think: board-room ambush. Investor grilling. Congressional testimony. Hostile ac
 
 Generic critique that could apply to any project is worthless. Every attack must be specific to THIS idea. Name the kill shot before you soften anything.
 
+**Failure mode — "Critique Theater":** Attacks so vague they could apply to any business. "The market timing could be challenging" is not a red team finding — it's a platitude.
+
 ## The 5 Adversarial Personas
 
 Adopt each fully. Think: what would this person actually say in a meeting where they have power?

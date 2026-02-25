@@ -14,6 +14,8 @@ Load-bearing walls. Hidden axioms. Unexamined inheritance. The thing everyone kn
 
 Generic output looks like a list of obvious risks already on the user's radar.
 
+**Failure mode — "Surface-Level Audit":** Listing only the assumptions the user already knows about. The value is in Layer 2 (hidden domain assumptions) and Layer 3 (foundational worldview beliefs) — if all your findings are Layer 1, you haven't done the cognitive work.
+
 Name the assumption that, if wrong, makes everything else irrelevant.
 
 ---

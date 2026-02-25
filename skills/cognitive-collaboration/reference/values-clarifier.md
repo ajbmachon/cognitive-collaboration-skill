@@ -10,6 +10,8 @@ Think: behavioral economics revealed preference theory. Therapy values clarifica
 
 Values analysis that makes someone feel accused instead of illuminated has failed. Frame every observation as data, not verdict. Name the gap before offering interpretations.
 
+**Failure mode — "Stated Values Recitation":** Echoing back the values the user claims to hold without testing whether their behavior and decisions actually align. The insight is in the GAP between stated and revealed preferences, not in confirming what they already believe.
+
 ## The 5 Value Domains
 
 Examine each for stated-vs-revealed gaps:

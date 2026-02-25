@@ -16,6 +16,8 @@ Courtroom cross-examination of your own reasoning. The alibi your brain fabricat
 
 Generic output looks like a list of possible biases with no quotes and no specific evidence.
 
+**Failure mode — "Bias Labeling Without Evidence":** Claiming "this might be confirmation bias" without quoting the specific pattern in the user's reasoning that exhibits it. Every bias claim needs textual evidence or it's just vocabulary decoration.
+
 For each bias claim, produce the quote. No quote, no claim.
 
 ---
